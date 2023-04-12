@@ -1,5 +1,6 @@
 #:kivy 2.1.0
 
+
 <MainScreen>:
     name:"main"
     MenuContainer:
@@ -17,6 +18,7 @@
     MenuContainer:
         MenuButton:
             text:"New"
+            on_press:root.manager.current='newch'
             pos_hint:{'center_x':.5, 'top':.1}
         MenuButton:
             text:"Load"
@@ -33,10 +35,12 @@
     pos_hint:{'center_x':.5,'top':1}
 
 <NewChara>:
-	BoxLayout:
-		orientation:'horizontal'
-		BoxLayout:
-			orientation:'vertical'
-		BoxLayout:
-			orientation:'vertical'
-
+    name:"newch"
+    BoxLayout:
+        orientation:'horizontal'
+        BoxLayout:
+            orientation:'vertical'
+            Label:
+                text:'Label'
+        BoxLayout:
+            orientation:'vertical'

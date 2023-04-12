@@ -17,5 +17,6 @@ class CharacterScreen(MDScreen):
 
 class EquipmentScreen(MDScreen):
     pass
+
 class NewChara(MDScreen):
     pass

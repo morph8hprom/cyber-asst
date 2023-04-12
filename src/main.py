@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+
 """
 
 Cointains classes and logic for main application
@@ -37,7 +38,10 @@ class MainApp(MDApp):
         app = WindowManager()
         # Add instance of MainScreen to ScreenManager instance
         app.add_widget(MainScreen())
+        # Add instance of CharacterScreen to Screenmanager instance
         app.add_widget(CharacterScreen())
+        # Add instance of NewChara to ScreenManager instance
+        app.add_widget(NewChara())
         return app
 
 
