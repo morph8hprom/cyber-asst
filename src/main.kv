@@ -1,0 +1,42 @@
+#:kivy 2.1.0
+
+<MainScreen>:
+    name:"main"
+    MenuContainer:
+        MenuButton:
+            text:"Characters"
+            on_press:root.manager.current="chara"
+            pos_hint:{'center_x':.5, 'center_y':.1}
+        MenuButton:
+            text:"Equipment"
+            pos_hint:{'center_x':.5}
+        
+    
+<CharacterScreen>:
+    name:"chara"
+    MenuContainer:
+        MenuButton:
+            text:"New"
+            pos_hint:{'center_x':.5, 'top':.1}
+        MenuButton:
+            text:"Load"
+            pos_hint:{'center_x':.5, 'top':.1}
+    HomeButton:
+        icon:'home-outline'
+        on_press:root.manager.current='main'
+        pos_hint:{'center_x':.8,'center_y':.2}
+<MenuContainer>:
+    adaptive_width: True
+    orientation:'vertical'
+    spacing:5
+    size_hint:.3,.5
+    pos_hint:{'center_x':.5,'top':1}
+
+<NewChara>:
+	BoxLayout:
+		orientation:'horizontal'
+		BoxLayout:
+			orientation:'vertical'
+		BoxLayout:
+			orientation:'vertical'
+
